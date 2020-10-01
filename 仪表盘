@@ -1,0 +1,19 @@
+
+        % Value changed function: EditField
+        function EditFieldValueChanged(app, event)
+            value = app.EditField.Value;
+            app.Gauge.Value = value;
+        end
+
+        % Button pushed function: IncreaseButton
+        function IncreaseButtonPushed(app, event)
+            app.Gauge.Value =  app.Gauge.Value + 5;
+            app.EditField.Value = app.Gauge.Value;
+            
+        end
+
+        % Button pushed function: DecreaseButton
+        function DecreaseButtonPushed(app, event)
+             app.Gauge.Value =  app.Gauge.Value - 5;
+             app.EditField.Value = app.Gauge.Value;
+        end
